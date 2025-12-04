@@ -12,7 +12,6 @@ const onLogin = () => {
     localStorage.setItem('username', usernameInput.value);
 
     if(usernameInput.value === 'admin' && passwordInput.value === 'admin123#') {
-        alert('Anda login sebagai admin');
         const textAdmin = 'Hai, admin. Semoga hari ini anda bisa menjalani aktivitas dengan baik!';
         admin.append(textAdmin);
         localStorage.setItem('role', 'admin');
@@ -20,7 +19,6 @@ const onLogin = () => {
         passwordInput.style.display = 'none';
         btnLogin.style.display = 'none';
     } else {
-        alert('Anda login sebagai user biasa');
         const textUser = `Hai, ${usernameInput.value} semoga hari ini menjadi hari yang menyenangkan`;
         user.append(textUser);
         localStorage.setItem('role', 'user');
@@ -32,24 +30,24 @@ const onLogin = () => {
 }
 
 if(localStorage.getItem('username')) {
-    // usernameInput.style.display = 'none';
-    // passwordInput.style.display = 'none';
-    // btnLogin.style.display = 'none';
+    usernameInput.style.display = 'none';
+    passwordInput.style.display = 'none';
+    btnLogin.style.display = 'none';
 
     if(localStorage.getItem('role') === 'admin') {
         const textAdmin = 'Hai, admin. Semoga hari ini anda bisa menjalani aktivitas dengan baik!';
         admin.append(textAdmin);
         user.style.display = 'none';
-        // usernameInput.style.display = 'none';
-        // passwordInput.style.display = 'none';
-        // btnLogin.style.display = 'none';
+        usernameInput.style.display = 'none';
+        passwordInput.style.display = 'none';
+        btnLogin.style.display = 'none';
     } else {
         const textUser = `Hai, ${usernameInput.value} semoga hari ini menjadi hari yang menyenangkan`;
         user.append(textUser);
         admin.style.display = 'none';
-        // usernameInput.style.display = 'none';
-        // passwordInput.style.display = 'none';
-        // btnLogin.style.display = 'none';
+        usernameInput.style.display = 'none';
+        passwordInput.style.display = 'none';
+        btnLogin.style.display = 'none';
     }
 }
 
