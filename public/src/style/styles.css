@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {background-color: lightskyblue; height: 100vh; overflow-y: hidden;}
+
+#root {color: #fff; text-align: center;}
+
+.main-content {margin: 150px auto;}
+
+button#btn-login {
+    padding: 10px;
+    width: 100px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+input {padding: 10px; width: 400px; border-radius: 8px; border: none;}
+button#btn-login:active {background-color: #ddd;}
